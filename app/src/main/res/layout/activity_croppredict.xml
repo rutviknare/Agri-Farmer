@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Croppredict"
+    android:background="@drawable/mainbkg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Weather Forecasting"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/selectdate"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="120dp"
+        android:padding="8dp"
+        android:hint="Select Start Date"
+        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+        android:drawablePadding="8dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/predict_edittext"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/duration"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="200dp"
+        android:padding="8dp"
+        android:inputType="number"
+        android:hint="Select Duration"
+        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+        android:drawablePadding="8dp"
+        android:background="@drawable/predict_edittext"/>
+    <Button
+        android:id="@+id/fetching_weather"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/lavender"
+        android:text="Start Fetch"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:gravity="center"
+        android:text="Soil Nutrients"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/ph"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="500dp"
+        android:padding="8dp"
+
+        android:hint="Enter Soil pH"
+        android:drawableLeft="@drawable/soil_ph"
+        android:drawablePadding="8dp"
+        android:background="@drawable/predict_edittext"/>
+
+    <Button
+        android:id="@+id/btn_predict"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:text="Start Prediction"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>
