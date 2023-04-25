@@ -5,33 +5,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbkg">
+    android:background="#1EA5CD">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:fontFamily="@font/acme"
 
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="20dp"
-            android:padding="12dp"
-            android:text="Weather Forecast"
-            android:textAlignment="center"
-            android:textColor="#c4ffffff"
-            android:textSize="26sp"
-            app:layout_constraintHorizontal_bias="0.5"
-            tools:ignore="MissingConstraints" />
+        android:text="Weather Prediction Details"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center" />
 
 
 
-        <ScrollView
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            app:layout_constraintHorizontal_bias="0.5"
-            tools:ignore="MissingConstraints">
+            android:layout_height="match_parent"
+            android:background="@drawable/climate">
+
+            <!--        <TextView-->
+
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:elevation="20dp"-->
+            <!--            android:padding="12dp"-->
+            <!--            android:text="Weather Forecasting Details"-->
+            <!--            android:textAlignment="center"-->
+            <!--            android:textColor="#C4072DEF"-->
+            <!--            android:textSize="26sp"-->
+            <!--            app:layout_constraintHorizontal_bias="0.5"-->
+            <!--            tools:ignore="MissingConstraints" />-->
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,16 +55,16 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    />
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="75dp"-->
+                <!--                    />-->
 
                 <LinearLayout
                     android:layout_width="340dp"
                     android:layout_height="209dp"
-                    android:orientation="vertical"
                     android:layout_marginTop="40dp"
+                    android:orientation="vertical"
                     android:padding="15dp">
 
                     <LinearLayout
@@ -64,7 +80,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Today"
+                            android:text="Start Date"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
                             android:textSize="22sp"
@@ -75,10 +93,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Tuesday, 22 March"
+                            android:text="DD MMM YYY"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="textEnd"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="10pt"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -104,6 +124,8 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:text="0.0"
+                                android:fontFamily="@font/acme"
+
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="40sp"
@@ -116,6 +138,8 @@
                                 android:layout_marginBottom="15dp"
                                 android:gravity="center"
                                 android:text="o"
+                                android:fontFamily="@font/acme"
+
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -123,12 +147,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_marginBottom="15dp"
+                                android:layout_marginBottom="23dp"
                                 android:gravity="bottom"
                                 android:text="c"
+                                android:fontFamily="@font/acme"
+
                                 android:textColor="@color/black"
-                                android:textSize="28sp"
+                                android:textSize="20pt"
                                 android:textStyle="bold" />
+                            <ImageView
+                                android:id="@+id/weatherimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="120dp"
+                                android:layout_marginRight="20dp"/>
                         </LinearLayout>
 
                         <!--                        <com.airbnb.lottie.LottieAnimationView-->
@@ -147,7 +179,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:drawablePadding="5dp"
-                        android:text="Kolhapur, MH, India"
+                        android:text="Location"
+                        android:fontFamily="@font/acme"
+
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -166,8 +200,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="LAT : 19.05, LONG : 50.34"
+                        android:text="LAT : 00.00, LONG : 00.00"
                         android:textAlignment="center"
+                        android:fontFamily="@font/acme"
+
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -180,6 +216,8 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="Weather description"
+                        android:fontFamily="@font/acme"
+
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="20sp"
@@ -206,6 +244,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
                             android:text="0.0"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="26sp"
@@ -223,6 +263,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
                             android:text="wind_flow"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="16sp"
@@ -234,8 +276,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="15dp"
-                        android:orientation="vertical"
                         android:background="#86FCF2"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
@@ -244,6 +286,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
                             android:text="0.0"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="26sp"
@@ -261,6 +305,7 @@
                             android:layout_margin="2dp"
                             android:text="precipitation"
                             android:textAlignment="center"
+                            android:fontFamily="@font/acme"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -269,8 +314,8 @@
                     <LinearLayout
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:background="#86FCF2"
+                        android:orientation="vertical"
 
                         android:padding="5dp">
 
@@ -280,6 +325,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
                             android:text="0.0"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="26sp"
@@ -297,6 +344,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
                             android:text="humidity"
+                            android:fontFamily="@font/acme"
+
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="16sp"
@@ -310,35 +359,41 @@
                     android:layout_marginTop="15dp"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/wc_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Click Here for fetch "
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/wc_weather_alerts"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="10dp"-->
-<!--                        android:layout_marginEnd="10dp"-->
-<!--                        android:layout_marginBottom="10dp"-->
-<!--                        android:text="None"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="@color/black"-->
-<!--                        android:textSize="20sp"-->
-<!--                        android:textStyle="bold" />-->
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/wc_weather_alerts"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="10dp"-->
+                    <!--                        android:layout_marginEnd="10dp"-->
+                    <!--                        android:layout_marginBottom="10dp"-->
+                    <!--                        android:text="None"-->
+                    <!--                        android:textAlignment="center"-->
+                    <!--                        android:textColor="@color/black"-->
+                    <!--                        android:textSize="20sp"-->
+                    <!--                        android:textStyle="bold" />-->
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="80dp" />
             </LinearLayout>
-        </ScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/wc_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="680dp"
+        android:background="#0071D4"
+        android:text="Click Here for fetch "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/acme"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
 </FrameLayout>

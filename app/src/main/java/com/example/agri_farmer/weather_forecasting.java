@@ -1,5 +1,6 @@
 package com.example.agri_farmer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DownloadManager;
@@ -40,10 +41,18 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.RequestFuture;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,10 +71,14 @@ import java.util.Set;
 
 public class weather_forecasting extends AppCompatActivity {
 
-    TextView temp, location1, windspeed,precip,humidity,lag_log,wcdecs;
+    TextView temp, location1, windspeed,precip,humidity,lag_log,wcdecs,date;
     Button title;
+    ImageView weather;
+    FirebaseAuth mAuth;
+    FirebaseDatabase db;
     private String weatherurl="https://weather-api-n7w1.onrender.com/currentWeather";
     RequestQueue requestQueue;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +91,9 @@ public class weather_forecasting extends AppCompatActivity {
         lag_log=findViewById(R.id.wc_lat_long);
         title=findViewById(R.id.wc_title);
         wcdecs=findViewById(R.id.wc_description);
+        date=findViewById(R.id.wc_day_date);
+        weather=findViewById(R.id.weatherimage);
+        mAuth=FirebaseAuth.getInstance();
         final LoadingDialog loadingDialog=new LoadingDialog(weather_forecasting.this);
 
 
@@ -93,36 +109,56 @@ public class weather_forecasting extends AppCompatActivity {
                     @Override
                     public void run() {
                         loadingDialog.dismissDialog();
-                        String location="nashik";
-                        String hour="12";
-
-                        StringRequest stringRequest=new StringRequest(Request.Method.POST,weatherurl,response ->{
-                            try{
-                                JSONObject jsonObject=new JSONObject(response);
-                                temp.setText(jsonObject.getString("temp"));
-                                location1.setText(jsonObject.getString("address"));
-                                windspeed.setText(jsonObject.getString("windspeed"));
-                                precip.setText(jsonObject.getString("precip"));
-                                humidity.setText(jsonObject.getString("humidity"));
-                                wcdecs.setText(jsonObject.getString("description"));
-                                lag_log.setText("LAT: "+jsonObject.getString("latitude")+" & LONG: "+jsonObject.getString("longitude"));
-                                Toast.makeText(weather_forecasting.this,"success ",Toast.LENGTH_LONG).show();
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        },
-                                error -> Toast.makeText(weather_forecasting.this,"failure",Toast.LENGTH_LONG).show()){
-                            //Add parameter to the request
+                        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                        reference= FirebaseDatabase.getInstance().getReference("Users");
+                        reference.child(currentFirebaseUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                             @Override
-                            protected Map<String,String> getParams() throws AuthFailureError {
-                                Map<String,String> params=new HashMap<>();
-                                params.put("location",location);
-                                params.put("hour",hour);
-                                return params;
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if(task.isSuccessful()){
+
+//                                    Toast.makeText(weather_forecasting.this,"Successfully Read",Toast.LENGTH_LONG).show();
+                                    DataSnapshot dataSnapshot=task.getResult();
+                                    String temp_location=String.valueOf(dataSnapshot.child("district").getValue());
+                                    String location=temp_location.toLowerCase();
+                                    String hour=String.valueOf(dataSnapshot.child("duration").getValue());
+                                    String start_date=String.valueOf(dataSnapshot.child("startdate").getValue());
+                                    date.setText(start_date);
+
+                                    StringRequest stringRequest=new StringRequest(Request.Method.POST,weatherurl,response ->{
+                                        try{
+                                            JSONObject jsonObject=new JSONObject(response);
+                                            temp.setText(jsonObject.getString("temp"));
+                                            location1.setText(jsonObject.getString("address"));
+                                            windspeed.setText(jsonObject.getString("windspeed"));
+                                            precip.setText(jsonObject.getString("precip"));
+                                            humidity.setText(jsonObject.getString("humidity"));
+                                            wcdecs.setText(jsonObject.getString("description"));
+                                            lag_log.setText("LAT: "+jsonObject.getString("latitude")+" & LONG: "+jsonObject.getString("longitude"));
+                                            weather.setImageResource(R.drawable.ic_weather_forecasting);
+                                            Toast.makeText(weather_forecasting.this,"Data Successfully Fetch",Toast.LENGTH_LONG).show();
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    },
+                                            error -> Toast.makeText(weather_forecasting.this,"Please Click the Button Again",Toast.LENGTH_LONG).show()){
+                                        //Add parameter to the request
+                                        @Override
+                                        protected Map<String,String> getParams() throws AuthFailureError {
+                                            Map<String,String> params=new HashMap<>();
+                                            params.put("location",location);
+                                            params.put("hour",hour);
+                                            return params;
+                                        }
+                                    };
+                                    requestQueue= Volley.newRequestQueue(weather_forecasting.this);
+                                    requestQueue.add(stringRequest);
+
+                                }else {
+                                    Toast.makeText(getApplicationContext(),"Failed to read",Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        };
-                        requestQueue= Volley.newRequestQueue(weather_forecasting.this);
-                        requestQueue.add(stringRequest);
+                        });
+
 
                     }
                 },3000);

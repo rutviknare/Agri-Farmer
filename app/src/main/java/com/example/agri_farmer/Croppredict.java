@@ -1,5 +1,6 @@
 package com.example.agri_farmer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -20,18 +21,49 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.example.agri_farmer.databinding.ActivityMainBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 public class Croppredict extends AppCompatActivity {
 
-    EditText d1;
+    EditText d1,durations,phs;
     Calendar calendar;
-    String[] items={"1","2","3","4","5","6","7","8","9","10","11","12"};
-    ArrayAdapter<String>  adapterItems;
+    Spinner districts;
+    FirebaseAuth mAuth;
+
+//    String[] items={"1","2","3","4","5","6","7","8","9","10","11","12"};
+//    ArrayAdapter<String>  adapterItems;
+
+    String startdate,duration,district,ph;
+    FirebaseDatabase db;
+    DatabaseReference reference;
+
     Button fetchingweather,predict_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_croppredict);
         d1=findViewById(R.id.selectdate);
+        durations=findViewById(R.id.duration);
+        districts=findViewById(R.id.district);
+        phs=findViewById(R.id.ph);
+        mAuth=FirebaseAuth.getInstance();
+
+        ArrayAdapter<String> myadapter=new ArrayAdapter<String>(Croppredict.this,
+                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.district));
+        myadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        districts.setAdapter(myadapter);
 
 
         fetchingweather=(Button)findViewById(R.id.fetching_weather);
@@ -63,7 +95,8 @@ public class Croppredict extends AppCompatActivity {
                 updateCalender();
             }
             private void updateCalender(){
-                String Format="MM/dd/yy";
+                String Format="dd MMMM yyyy";
+//                MM/dd/yy
                 SimpleDateFormat sdf=new SimpleDateFormat(Format, Locale.US);
                 d1.setText(sdf.format(calendar.getTime()));
             }
@@ -86,9 +119,34 @@ public class Croppredict extends AppCompatActivity {
                     @Override
                     public void run() {
                         loadingDialog.dismissDialog();
-                        Intent intent=new Intent(Croppredict.this,show_predict.class);
-                        startActivity(intent);
-                        finish();
+                        startdate=d1.getText().toString();
+                        duration=durations.getText().toString();
+                        district=districts.getSelectedItem().toString();
+                        ph=phs.getText().toString();
+
+                        if(!startdate.isEmpty() && !duration.isEmpty() && !district.isEmpty() && !ph.isEmpty()){
+                            FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                            Cropdata cropdata=new Cropdata(startdate,duration,district,ph);
+                            db=FirebaseDatabase.getInstance();
+                            reference=db.getReference("Users");
+                            reference.child(currentFirebaseUser.getUid()).setValue(cropdata).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    d1.setText("");
+                                    durations.setText("");
+                                    phs.setText("");
+                                    Toast.makeText(getApplicationContext(),"successfully updated",Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(Croppredict.this,show_predict.class);
+                                    intent.putExtra("startdate",startdate);
+                                    intent.putExtra("duration",duration);
+                                    intent.putExtra("district",district);
+                                    intent.putExtra("ph",ph);
+                                   startActivity(intent);
+                                     finish();
+                                }
+                            });
+                        }
+
                     }
                 },3000);
             }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="475dp"
+    app:cardElevation="20dp"
+    app:cardBackgroundColor="#45C5AB"
+    app:cardCornerRadius="30dp"
+    android:padding="5dp"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:text="X"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cropimage"
+            android:layout_width="169dp"
+            android:layout_height="134dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/rice" />
+
+        <TextView
+            android:id="@+id/cropheading"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Rice"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="12pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Montreal,Canada"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="5dp"/>-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cropparagraph"
+        android:layout_width="317dp"
+        android:layout_height="212dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly O. glaberrima (African rice). The name wild rice is usually used for species of the genera Zizania and Porteresia, both wild and domesticated, although the term may also be used for primitive or uncultivated varieties of Oryza.
+
+As a cereal grain, domesticated rice is the most widely consumed sta"
+        android:textColor="@color/black" />
+
+
+</androidx.cardview.widget.CardView>

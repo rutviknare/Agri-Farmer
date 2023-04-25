@@ -5,28 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Croppredict"
-    android:background="@drawable/mainbkg">
+    android:background="@drawable/bg_view">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/acme"
         android:gravity="center"
-        android:text="Weather Forecasting"
+        android:text="Crop Duration Details"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_marginLeft="25dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#058067">
     <EditText
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_gravity="center"
         android:id="@+id/selectdate"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:padding="8dp"
         android:hint="Select Start Date"
         android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
@@ -40,51 +48,70 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_gravity="center"
         android:id="@+id/duration"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="130dp"
         android:padding="8dp"
         android:inputType="number"
-        android:hint="Select Duration"
+        android:hint="Select Duration (0-12)"
         android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+        android:drawablePadding="8dp"
+        android:background="@drawable/predict_edittext"/>
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/district"
+        android:autofillHints="District"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"
+        android:padding="8dp"
         android:drawablePadding="8dp"
         android:background="@drawable/predict_edittext"/>
     <Button
         android:id="@+id/fetching_weather"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="310dp"
         android:layout_centerHorizontal="true"
-        android:background="@color/lavender"
+        android:layout_marginLeft="70dp"
+        android:fontFamily="@font/acme"
+        android:background="@drawable/rounded_corner"
         android:text="Start Fetch"
         android:textColor="@color/black"
         android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
-        android:gravity="center"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="100dp"
         android:text="Soil Nutrients"
+        android:fontFamily="@font/acme"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_marginLeft="25dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="550dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#14369F"
+        app:cardElevation="20dp"
+        >
     <EditText
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_gravity="center"
         android:id="@+id/ph"
         android:inputType="numberDecimal"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:padding="8dp"
-
-        android:hint="Enter Soil pH"
+        android:hint="Enter Soil pH(3-10)"
         android:drawableLeft="@drawable/soil_ph"
         android:drawablePadding="8dp"
         android:background="@drawable/predict_edittext"/>
@@ -93,11 +120,13 @@
         android:id="@+id/btn_predict"
         android:layout_width="266dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
         android:background="@drawable/rounded_corner"
         android:text="Start Prediction"
+        android:layout_marginLeft="40dp"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:fontFamily="@font/acme"
 
+        android:textSize="20dp" />
+</androidx.cardview.widget.CardView>
 </RelativeLayout>

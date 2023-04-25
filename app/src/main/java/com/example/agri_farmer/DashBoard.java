@@ -7,10 +7,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class DashBoard extends AppCompatActivity {
 
-    CardView croppredict,logout,weather,history;
+    CardView croppredict,logout,weather,proj_video,recenthistory;
+    TextView dashboard;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +25,11 @@ public class DashBoard extends AppCompatActivity {
         croppredict=findViewById(R.id.crop_predict);
         logout=findViewById(R.id.log_out);
         weather=findViewById(R.id.weath_fore);
-        history=findViewById(R.id.crophistory);
+        proj_video=findViewById(R.id.projectvideo);
+        recenthistory=findViewById(R.id.recenthistory);
+//        history=findViewById(R.id.crophistory);
+        dashboard=findViewById(R.id.dashboard);
+        mAuth=FirebaseAuth.getInstance();
         croppredict.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,15 +53,28 @@ public class DashBoard extends AppCompatActivity {
             }
         });
 
-        history.setOnClickListener(new View.OnClickListener() {
+        proj_video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplication(),projectvideo.class);
+                startActivity(intent);
+            }
+        });
+        recenthistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplication(),crop_history.class);
                 startActivity(intent);
             }
         });
-
-
-
+//        history.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(getApplication(),crop_history.class);
+//                startActivity(intent);
+//            }
+//        });
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        dashboard.setText("Welcome "+currentFirebaseUser.getEmail());
     }
 }
