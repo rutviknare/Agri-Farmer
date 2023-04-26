@@ -41,9 +41,9 @@ public class DashBoard extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplication(),MainActivity.class);
+                Intent intent=new Intent(getApplication(),userprofile.class);
                 startActivity(intent);
-                finish();
+
             }
         });
         weather.setOnClickListener(new View.OnClickListener() {

@@ -17,7 +17,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Month;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -41,6 +43,7 @@ public class Croppredict extends AppCompatActivity {
     Calendar calendar;
     Spinner districts;
     FirebaseAuth mAuth;
+    int updatemonths;
 
 //    String[] items={"1","2","3","4","5","6","7","8","9","10","11","12"};
 //    ArrayAdapter<String>  adapterItems;
@@ -93,6 +96,7 @@ public class Croppredict extends AppCompatActivity {
                 calendar.set(calendar.YEAR,year);
                 calendar.set(calendar.MONTH,month);
                 calendar.set(calendar.DAY_OF_MONTH,dayOfMonth);
+
                 updateCalender();
             }
             private void updateCalender(){
@@ -100,6 +104,7 @@ public class Croppredict extends AppCompatActivity {
 //                MM/dd/yy
                 SimpleDateFormat sdf=new SimpleDateFormat(Format, Locale.US);
                 d1.setText(sdf.format(calendar.getTime()));
+
             }
         };
         d1.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +113,7 @@ public class Croppredict extends AppCompatActivity {
                 new DatePickerDialog(Croppredict.this,date,calendar.get(calendar.YEAR),calendar.get(calendar.MONTH),calendar.get(calendar.DAY_OF_MONTH)).show();
             }
         });
+
 
         predict_btn=findViewById(R.id.btn_predict);
         predict_btn.setOnClickListener(new View.OnClickListener() {

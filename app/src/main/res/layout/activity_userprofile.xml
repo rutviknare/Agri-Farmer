@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/framingimg"/>
+
+        <TextView
+            android:id="@+id/acc_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:fontFamily="@font/acme"
+            android:padding="12dp"
+            android:text="My Account"
+            android:textAlignment="center"
+            android:textColor="#c4ffffff"
+            android:textSize="26sp"
+            android:background="#2B8C20"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#234701"
+            android:elevation="15dp"/>
+<!--            app:layout_constraintEnd_toEndOf="0"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="0"-->
+<!--            app:layout_constraintTop_toTopOf="0" />-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+<!--            app:layout_constraintEnd_toEndOf="0"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="0"-->
+<!--            app:layout_constraintTop_toTopOf="0">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp" />
+
+                <LinearLayout
+                    android:id="@+id/acc_ll_1"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="180dp"
+                    android:background="#1F9F08"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_margin="5dp">
+
+                        <ImageView
+                            android:id="@+id/acc_profile"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="todo"
+                            android:src="@drawable/ic_baseline_account_circle_24" />
+
+                        <ImageView
+                            android:id="@+id/acc_edit"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="todo"
+                            android:src="@drawable/ic_edit" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/acc_full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/acme"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:text="Name: Rutvik Nare"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/acc_location"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:padding="5dp"-->
+<!--                            android:text="user_location"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:textStyle="bold" />-->
+
+                        <TextView
+                            android:id="@+id/acc_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/acme"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:text="Mobile No: 9881439608"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/acc_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/acme"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="Email Id: rutviknare16@gmail.com"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/acc_edit_linear_layout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="10dp"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:weightSum="3">-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/acc_edit_full_name"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:autofillHints="@string/fullname"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:hint="fullname"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/acc_edit_user_location"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:autofillHints="@string/user_location"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:hint="user_location"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/acc_edit_mobile_number"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:autofillHints="@string/mobile_number"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:hint="mobile_number"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/acc_update_btn_card_view"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_margin="10dp"-->
+<!--                        app:cardBackgroundColor="@color/white"-->
+<!--                        app:cardCornerRadius="10dp"-->
+<!--                        app:cardElevation="10dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/acc_update_btn"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="update"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="24sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </androidx.cardview.widget.CardView>-->
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/acc_ll_2"-->
+<!--                    android:layout_width="340dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@drawable/dialog_layout_bg"-->
+<!--                    android:elevation="10dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:fontFamily="@font/acme"-->
+<!--                        android:padding="7dp"-->
+<!--                        android:text="sign_up_or_login_to_manage_your_account"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="12dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:padding="7dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/acc_login_btn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:text="login"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textColor="@color/purple_200"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/acc_signup_btn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="25dp"-->
+<!--                            android:fontFamily="@font/acme"-->
+<!--                            android:text="sign_up"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textColor="@color/purple_200"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/acc_ll_3"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#1F9F08"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/acc_weather_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/acme"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:text="Weather Forecasting Details"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/acc_crop_history_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/acme"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:textColor="@color/black"
+                        android:text="Recent Crop history"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/acc_help_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/acme"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:text="Help"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/acc_about_us_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/acme"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:text="About Us"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_forward_arrow" />
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:layout_marginStart="15dp"-->
+<!--                        android:layout_marginEnd="15dp"-->
+<!--                        android:background="@android:color/darker_gray" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/acc_settings_tv"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:fontFamily="@font/acme"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:padding="15dp"-->
+<!--                        android:text="settings"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:drawableEndCompat="@drawable/ic_forward_arrow" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/acc_ll_4"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#F80404"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:id="@+id/acc_logout_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/acme"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="logout"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="100dp" />-->
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
