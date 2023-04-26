@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -56,8 +57,9 @@ public class DashBoard extends AppCompatActivity {
         proj_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplication(),projectvideo.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getApplication(),projectvideo.class);
+//                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"Video will Uploading Soon",Toast.LENGTH_SHORT).show();
             }
         });
         recenthistory.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +77,6 @@ public class DashBoard extends AppCompatActivity {
 //            }
 //        });
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        dashboard.setText("Welcome "+currentFirebaseUser.getEmail());
+        dashboard.setText(currentFirebaseUser.getEmail());
     }
 }

@@ -246,10 +246,9 @@
 
     </GridLayout>
     <TextView
-        android:id="@+id/dashboard"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:text="Welcome rutviknare2019@gmail.com"
+        android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="31sp"
         android:textStyle="bold"
@@ -257,4 +256,16 @@
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="rutviknare2019@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
 </RelativeLayout>

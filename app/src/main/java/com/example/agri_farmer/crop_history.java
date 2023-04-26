@@ -3,6 +3,7 @@ package com.example.agri_farmer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -157,8 +158,13 @@ public class crop_history extends AppCompatActivity {
                     else {
                         thirdimage.setImageResource(R.drawable.bajra);
                     }
-
-
+                    String checkdetails=firstheading.getText().toString();
+                    if(checkdetails.equals("null")){
+                        Toast.makeText(getApplicationContext(),"First Enter the Details",Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(getApplicationContext(),Croppredict.class);
+                        startActivity(intent);
+                        finish();
+                    }
 
 
                 }

@@ -85,6 +85,7 @@ public class Croppredict extends AppCompatActivity {
         });
 
 
+
         Calendar calendar=Calendar.getInstance();
         DatePickerDialog.OnDateSetListener date=new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -113,6 +114,7 @@ public class Croppredict extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 loadingDialog.startLoadingDialog();
                 Handler handler=new Handler();
                 handler.postDelayed(new Runnable() {
@@ -123,8 +125,11 @@ public class Croppredict extends AppCompatActivity {
                         duration=durations.getText().toString();
                         district=districts.getSelectedItem().toString();
                         ph=phs.getText().toString();
-
-                        if(!startdate.isEmpty() && !duration.isEmpty() && !district.isEmpty() && !ph.isEmpty()){
+                        String temp_checking_weather=fetchingweather.getText().toString();
+                        if(temp_checking_weather.equals("Start Fetch")){
+                            Toast.makeText(getApplicationContext(),"First Click the Start Fetch Button",Toast.LENGTH_SHORT).show();
+                        }
+                        else if(!startdate.isEmpty() && !duration.isEmpty() && !district.isEmpty() && !ph.isEmpty()){
                             FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
                             Cropdata cropdata=new Cropdata(startdate,duration,district,ph);
                             db=FirebaseDatabase.getInstance();
