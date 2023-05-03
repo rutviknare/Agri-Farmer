@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    tools:context=".editprofile"
+    android:background="#14369F">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="310dp"
+        app:cardBackgroundColor="#14369F"
+        android:layout_marginStart="10dp"
+        >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/predict_edittext"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="8dp"
+            android:hint="Enter UserName"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/predict_edittext"
+            android:drawableLeft="@drawable/ic_baseline_smartphone_24"
+            android:drawablePadding="8dp"
+            android:hint="Enter Mobile Number"
+            android:inputType="numberDecimal"
+            android:padding="8dp" />
+        <EditText
+            android:id="@+id/birth"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/predict_edittext"
+            android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+            android:drawablePadding="8dp"
+            android:hint="Enter DOB DD/MM/YYYY"
+            android:inputType="date"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="266dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/acme"
+            android:text="Update Profile"
+            android:textColor="@color/black"
+
+            android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

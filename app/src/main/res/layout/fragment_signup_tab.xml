@@ -8,11 +8,18 @@
     android:orientation="vertical"
     tools:context=".SignupTabFragment">
 
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,24 +30,50 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:src="@drawable/signimg"/>
+
+
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:id="@+id/signup_email"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:padding="8dp"
                 android:hint="Email"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
                 android:drawablePadding="8dp"
                 android:background="@drawable/edittext_bkg"/>
 
+<!--            <EditText-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:id="@+id/username"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:hint="Username"-->
+<!--                android:drawableLeft="@drawable/ic_baseline_account_box_24"-->
+<!--                android:drawablePadding="8dp"-->
+<!--                android:background="@drawable/edittext_bkg"/>-->
+
+<!--            <EditText-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:id="@+id/phonenumber"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:padding="8dp"-->
+<!--                android:hint="Mobile No"-->
+<!--                android:drawableLeft="@drawable/ic_baseline_smartphone_24"-->
+<!--                android:drawablePadding="8dp"-->
+<!--                android:background="@drawable/edittext_bkg"/>-->
+
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:id="@+id/signup_password"
                 android:layout_marginTop="20dp"
@@ -53,7 +86,7 @@
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:id="@+id/signup_confirm"
                 android:layout_marginTop="20dp"
@@ -75,9 +108,9 @@
                 android:text="Signup"
                 android:fontFamily="@font/acme"
                 app:cornerRadius = "30dp"/>
-
         </LinearLayout>
 
     </LinearLayout>
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

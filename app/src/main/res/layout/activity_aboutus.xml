@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aboutus">
+
+    <LinearLayout
+        android:layout_width="416dp"
+        android:layout_height="221dp"
+        android:background="@drawable/team">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4AAA13"
+            android:fontFamily="@font/acme"
+            android:gravity="center"
+            android:text="About Us"
+            android:textColor="@color/black"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/green"
+        app:cardElevation="20dp"
+        android:layout_marginTop="220dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We express our sincere thanks to our Guide Prof. Mubin Tamboli for his/her constant encouragement and support throughout our project, especially for the useful suggestions given during the course of project and having laid down the foundation for the success of this work.
+
+	We would also like to thank our Project Coordinator, Prof. Sushma R. Vispute for her assistance, genuine support and guidance from early stages of the project.
+"
+            android:textSize="9pt"
+            android:textColor="@color/black"
+            android:fontFamily="@font/acme"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"/>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:backgroundTint="@color/green"
+            android:background="@color/white"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="280dp">
+
+            <!-- First Row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10pt"
+                    android:text="Name"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:text="Exam Seat No"
+                    android:textColor="@color/black"
+                    android:textSize="10pt" />
+            </TableRow>
+
+            <!-- Second Row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rutvik Nare"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BECOC375"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+            </TableRow>
+
+            <!-- Third Row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rutuja Patil"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BECOC376"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+            </TableRow>
+
+            <!-- Fourth Row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jarin Shikalgar"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BECOC377"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohini Shinde"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BECOC378"
+                    android:textSize="10pt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/acme"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -110,7 +110,7 @@
                             android:gravity="center_vertical"
                             android:padding="5dp"
                             android:textColor="@color/black"
-                            android:text="Name: Rutvik Nare"
+                            android:text="Name: XYZ"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -135,7 +135,19 @@
                             android:gravity="center_vertical"
                             android:padding="5dp"
                             android:textColor="@color/black"
-                            android:text="Mobile No: 9881439608"
+                            android:text="Mobile No: 1234567890"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/birthdisplay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/acme"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:text="Date Of Birth: DD MMM YYYY"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -148,7 +160,7 @@
                             android:fontFamily="@font/acme"
                             android:gravity="center_vertical"
                             android:padding="5dp"
-                            android:text="Email Id: rutviknare16@gmail.com"
+                            android:text="Email Id: current login mail ID"
                             android:textSize="15sp"
                             android:textStyle="bold" />
                     </LinearLayout>

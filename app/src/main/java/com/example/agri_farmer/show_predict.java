@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -58,6 +59,9 @@ public class show_predict extends AppCompatActivity {
         String duration=intent.getStringExtra("duration");
         String district=intent.getStringExtra("district");
         String ph=intent.getStringExtra("ph");
+        String username=intent.getStringExtra("username");
+        String mobile=intent.getStringExtra("mobile");
+        String date=intent.getStringExtra("date");
 
 
         mAuth= FirebaseAuth.getInstance();
@@ -85,7 +89,7 @@ public class show_predict extends AppCompatActivity {
                       String thirdimage=thirdheading.toLowerCase();
 
                 FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                Cropdata cropdata=new Cropdata(startdate,duration,district,ph,firstimage,secondimage,thirdimage,firstheading,secondheading,thirdheading);
+                Cropdata cropdata=new Cropdata(startdate,duration,district,ph,firstimage,secondimage,thirdimage,firstheading,secondheading,thirdheading,username,mobile,date);
                 db=FirebaseDatabase.getInstance();
                 reference=db.getReference("Users");
                 reference.child(currentFirebaseUser.getUid()).setValue(cropdata).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -326,6 +330,22 @@ public class show_predict extends AppCompatActivity {
             }
 
         }
+        String firstheading=h1.getText().toString();
+        String secondheading=h2.getText().toString();
+        String thirdheading=h3.getText().toString();
+        Intent intent1=new Intent(getApplicationContext(),userprofile.class);
+        intent1.putExtra("startdate",startdate);
+        intent1.putExtra("duration",duration);
+        intent1.putExtra("district",district);
+        intent1.putExtra("ph",ph);
+        intent1.putExtra("firstheading",h1.getText().toString());
+        intent1.putExtra("secondheading",h2.getText().toString());
+        intent1.putExtra("thirdheading",h3.getText().toString());
+        intent1.putExtra("firstimage",firstheading.toLowerCase());
+        intent1.putExtra("secondimage",secondheading.toLowerCase());
+        intent1.putExtra("thirdimage",thirdheading.toLowerCase());
+//        startActivity(intent1);
+//        finish();
 
     }
 }

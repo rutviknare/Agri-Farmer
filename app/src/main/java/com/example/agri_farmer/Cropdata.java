@@ -1,12 +1,26 @@
 package com.example.agri_farmer;
 
 public class Cropdata {
-    String startdate,duration,district,ph,firstimage,secondimage,thirdimage,firstheading,secondheading,thirdheading;
+    String startdate,duration,district,ph,firstimage,secondimage,thirdimage,firstheading,secondheading,thirdheading,username,mobilenumber,DOB;
 
     public Cropdata() {
     }
 
-
+    public Cropdata(String startdate, String duration, String district, String ph, String firstimage, String secondimage, String thirdimage, String firstheading, String secondheading, String thirdheading, String username, String mobilenumber, String DOB) {
+        this.startdate = startdate;
+        this.duration = duration;
+        this.district = district;
+        this.ph = ph;
+        this.firstimage = firstimage;
+        this.secondimage = secondimage;
+        this.thirdimage = thirdimage;
+        this.firstheading = firstheading;
+        this.secondheading = secondheading;
+        this.thirdheading = thirdheading;
+        this.username = username;
+        this.mobilenumber = mobilenumber;
+        this.DOB = DOB;
+    }
 
     public Cropdata(String startdate, String duration, String district, String ph, String firstimage, String secondimage, String thirdimage, String firstheading, String secondheading, String thirdheading) {
         this.startdate = startdate;
@@ -106,5 +120,29 @@ public class Cropdata {
 
     public void setThirdheading(String thirdheading) {
         this.thirdheading = thirdheading;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getMobilenumber() {
+        return mobilenumber;
+    }
+
+    public void setMobilenumber(String mobilenumber) {
+        this.mobilenumber = mobilenumber;
+    }
+
+    public String getDOB() {
+        return DOB;
+    }
+
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
     }
 }
