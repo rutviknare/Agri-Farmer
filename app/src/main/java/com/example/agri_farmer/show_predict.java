@@ -80,6 +80,14 @@ public class show_predict extends AppCompatActivity {
                       d1.setText("Duration: "+duration);
                       ph1.setText("Soil pH Value: "+ph);
                       l1.setText("Location: "+district);
+                      s2.setText("Start Date: "+startdate);
+                      d2.setText("Duration: "+duration);
+                      ph2.setText("Soil pH Value: "+ph);
+                      l2.setText("Location: "+district);
+                      s3.setText("Start Date: "+startdate);
+                      d3.setText("Duration: "+duration);
+                      ph3.setText("Soil pH Value: "+ph);
+                      l3.setText("Location: "+district);
 
                       String firstheading=h1.getText().toString();
                       String secondheading=h2.getText().toString();
@@ -108,10 +116,18 @@ public class show_predict extends AppCompatActivity {
                 i3.setImageResource(R.drawable.soyabean);
                 h3.setText("Soyabean");
 
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
                 s2.setText("Start Date: "+startdate);
                 d2.setText("Duration: "+duration);
                 ph2.setText("Soil pH Value: "+ph);
                 l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
 
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
@@ -139,6 +155,14 @@ public class show_predict extends AppCompatActivity {
                 i3.setImageResource(R.drawable.wheat);
                 h3.setText("Wheat");
 
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
                 s3.setText("Start Date: "+startdate);
                 d3.setText("Duration: "+duration);
                 ph3.setText("Soil pH Value: "+ph);
@@ -174,6 +198,21 @@ public class show_predict extends AppCompatActivity {
                 h2.setText("Cotton");
                 i3.setImageResource(R.drawable.jowar);
                 h3.setText("Jowar");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
@@ -199,9 +238,23 @@ public class show_predict extends AppCompatActivity {
                 h1.setText("Rice");
                 i2.setImageResource(R.drawable.groundnut);
                 h2.setText("Groundnut");
-
                 i3.setImageResource(R.drawable.wheat);
                 h3.setText("Wheat");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
@@ -227,6 +280,21 @@ public class show_predict extends AppCompatActivity {
                 h2.setText("Maize");
                 i3.setImageResource(R.drawable.soyabean);
                 h3.setText("Soyabean");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
@@ -259,6 +327,21 @@ public class show_predict extends AppCompatActivity {
                 h2.setText("Groundnut");
                 i3.setImageResource(R.drawable.soyabean);
                 h3.setText("Soyabean");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
@@ -285,6 +368,21 @@ public class show_predict extends AppCompatActivity {
                 h2.setText("Maize");
                 i3.setImageResource(R.drawable.jowar);
                 h3.setText("Jowar");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
@@ -310,6 +408,21 @@ public class show_predict extends AppCompatActivity {
                 h2.setText("Cotton");
                 i3.setImageResource(R.drawable.wheat);
                 h3.setText("Wheat");
+
+                s1.setText("Start Date: "+startdate);
+                d1.setText("Duration: "+duration);
+                ph1.setText("Soil pH Value: "+ph);
+                l1.setText("Location: "+district);
+                s2.setText("Start Date: "+startdate);
+                d2.setText("Duration: "+duration);
+                ph2.setText("Soil pH Value: "+ph);
+                l2.setText("Location: "+district);
+                s3.setText("Start Date: "+startdate);
+                d3.setText("Duration: "+duration);
+                ph3.setText("Soil pH Value: "+ph);
+                l3.setText("Location: "+district);
+
+
                 String firstheading=h1.getText().toString();
                 String secondheading=h2.getText().toString();
                 String thirdheading=h3.getText().toString();
