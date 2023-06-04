@@ -38,6 +38,17 @@ I used my Custom code for weather prediction and soil Composition which availabl
 <code><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1280px-Scikit_learn_logo_small.svg.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/pytorch/pytorch/39fa0b5d0a3b966a50dcd90b26e6c36942705d6d/docs/source/_static/img/pytorch-logo-dark.svg"></code>
 
+## OUTPUTS 
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/3efa48b3-a534-43cb-abc5-bcde4715c5fe" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/fe44b39c-ce77-4629-9054-bbc99abac93e" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/92b5f86b-2469-4e9e-a4d3-8059a0f76123" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/ca9082ca-ec0a-4fdf-bdf3-7e8a53ae723e" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/68d43451-c810-4fd2-b072-230493c5fe65" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/afab88e7-c3de-45fd-9355-0e8babf93347" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/37bd3059-abf3-4964-9d7a-e820b519f7f7" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/5670d02c-7de6-4f5c-b795-4a91c0c9fc03" width="200" height="400" />
+<img src="https://github.com/rutviknare/Agri-Farmer/assets/90822009/81eefa41-60d3-4727-a22d-0d5d42aa21a3" width="200" height="400" />
+
 ## DEPLOYMENT 🚀
 
 #### This Application is available in playstore very soon..
