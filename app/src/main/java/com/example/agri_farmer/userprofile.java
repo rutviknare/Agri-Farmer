@@ -200,12 +200,12 @@ public class userprofile extends AppCompatActivity {
                     String mobile=String.valueOf(dataSnapshot.child("mobilenumber").getValue());
                     String DOB1=String.valueOf(dataSnapshot.child("dob").getValue());
 
-                    fullname.setText("Name: "+username);
-                    mobileno1.setText("Mobile No: "+mobile);
-                    DOB.setText("Date Of Birth: "+DOB1);
-                    email.setText("Email Id: "+currentFirebaseUser.getEmail());
-
-
+                    if(!username.equals("null")){
+                        fullname.setText("Name: "+username);
+                        mobileno1.setText("Mobile No: "+mobile);
+                        DOB.setText("Date Of Birth: "+DOB1);
+                        email.setText("Email Id: "+currentFirebaseUser.getEmail());
+                    }
 
                 }
                 else{
