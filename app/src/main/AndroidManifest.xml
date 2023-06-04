@@ -40,7 +40,6 @@
         <activity
             android:name=".projectvideo"
             android:exported="false"
-            android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <meta-data
                 android:name="android.app.lib_name"

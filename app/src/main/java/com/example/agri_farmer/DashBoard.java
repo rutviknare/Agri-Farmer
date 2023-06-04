@@ -57,9 +57,9 @@ public class DashBoard extends AppCompatActivity {
         proj_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent=new Intent(getApplication(),projectvideo.class);
-//                startActivity(intent);
-                Toast.makeText(getApplicationContext(),"Video will Uploading Soon",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getApplication(),projectvideo.class);
+                startActivity(intent);
+               // Toast.makeText(getApplicationContext(),"Video will Uploading Soon",Toast.LENGTH_SHORT).show();
             }
         });
         recenthistory.setOnClickListener(new View.OnClickListener() {

@@ -15,7 +15,7 @@ public class projectvideo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projectvideo);
         vv=findViewById(R.id.projectvideo);
-        vv.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.testingvideo);
+        vv.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.video);
         MediaController med=new MediaController(this);
         vv.setMediaController(med);
         med.setAnchorView(vv);
