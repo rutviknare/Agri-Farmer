@@ -49,7 +49,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-public class PredictCropsActivity extends AppCompatActivity {
+public class Croppredict extends AppCompatActivity {
     private TextInputLayout startDate, duration, soilPH;
     private TextInputEditText editStartDate, editSoilPH;
     private AutoCompleteTextView autoDuration;
