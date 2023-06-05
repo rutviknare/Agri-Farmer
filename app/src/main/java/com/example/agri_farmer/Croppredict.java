@@ -57,7 +57,7 @@ public class Croppredict extends AppCompatActivity {
     private LottieAnimationView fetchAnimation;
     Dialog dialog;
     ArrayList<String> crops = new ArrayList<>();
-    private String urlPredictCrop = "https://agri-farmer-api.herokuapp.com/predictCrop";
+    private String urlPredictCrop = "https://weather-api-n7w1.onrender.com/predictCrop";
     private MyProfileDbHandler profileDbHandler = new MyProfileDbHandler(PredictCropsActivity.this);
     private CropRecordDbHandler recordDbHandler = new CropRecordDbHandler(PredictCropsActivity.this);
 
